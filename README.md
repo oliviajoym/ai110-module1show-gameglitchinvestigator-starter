@@ -25,30 +25,23 @@ It wrote the code, ran away, and now the game is unplayable.
 
 ## 📝 Document Your Experience
 
-- [ ] Describe the game's purpose.
-- [ ] Detail which bugs you found.
-- [ ] Explain what fixes you applied.
+- Game's Purpose: Number guesser based on a range
+- The bugs I found were problems with the hint message, game reset, and information message. The hint message was flipped for lower and higher. The game reset did not properly reset the game, and the game over message was still present. Finally, the info message ignored the different ranges based on difficulty.
+- Hint Message
+   - I flipped the message for lower or higher.
+- Game Reset
+   - I added the status, score, and history to the new_game funtion.
+- Info Message
+   - I used the dynamic variables {low} and {high}, which changed based on the difficulty level.
 
 ## 📸 Demo Walkthrough
 
 Describe your fixed game in numbered steps so a reader can follow along without watching a video:
 
-1. <!-- Describe this step -->
-2. <!-- Describe this step -->
-3. <!-- Describe this step -->
-4. <!-- Describe this step -->
-5. <!-- Add more steps as needed -->
-
-**Screenshot** *(optional)*: <!-- Insert a screenshot of your fixed, winning game here -->
-
-## 🧪 Test Results
-
-```
-# Paste your pytest output here, e.g.:
-# pytest tests/
-# ========================= X passed in 0.XXs =========================
-```
-
-## 🚀 Stretch Features
-
-- [ ] [If you choose to complete Challenge 4, describe the Enhanced UI changes here — a screenshot is optional]
+1. User enters a guess of 50 and clicks "Submit Guess"
+2. Game returns "Go LOWER!"
+3. User enters a guess of 25 and Game returns "Go LOWER!"
+4. User enters a guess of 10 and Game returns "Go HIGHER!"
+5. User enters a guess of 15 and Game returns "Go LOWER!"
+6. User enters a guess of 12 and Game returns "Correct"
+7. Game ends after the correct guess is found
